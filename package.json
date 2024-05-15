@@ -1,0 +1,26 @@
+{
+  "name": "testassignmentrabata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:prettier": "prettier --check \"{src,tests}/**/*.{ts,tsx}\" \"*.{ts,json}\"",
+    "lint:prettier:fix": "prettier --write \"{src,tests}/**/*.{ts,tsx}\" *.ts",
+    "test": "npx playwright test",
+    "test:debug": "PWDEBUG=console playwright test",
+    "test:install-deps": "npx playwright install chromium && playwright install-deps chromium",
+    "install-deps": "npx playwright install-deps",
+    "allure-report": "allure generate ./allure-results --clean",
+    "open-report": "npm run allure-report && allure open ./allure-report"
+  },
+  "keywords": [],
+  "author": "Vadim Sh",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.12",
+    "allure-commandline": "^2.29.0",
+    "allure-playwright": "^2.15.1",
+    "prettier": "3.2.5"
+  }
+}
